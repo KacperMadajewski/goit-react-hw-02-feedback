@@ -10,4 +10,10 @@
   border: 2px;
   background-color: rgb(136, 122, 103);
   color: rgb(209, 198, 198);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgba(133, 120, 102, 0.424);
+  color: rgb(69, 95, 29);
 }
