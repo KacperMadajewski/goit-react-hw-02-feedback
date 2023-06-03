@@ -1,18 +1,22 @@
-import { Stats } from './stats/stats';
+import Section from './Section/Section';
 
-export const App = () => {
-  return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
-    >
-      <Stats number={'LICZBA'} />
-    </div>
-  );
-};
+import { Component } from 'react';
+
+export class App extends Component {
+  render() {
+    return (
+      <div
+        style={{
+          height: '100vh',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          fontSize: 40,
+          color: '#010101',
+        }}
+      >
+        <Section title="Please leave feedback"></Section>
+      </div>
+    );
+  }
+}
