@@ -1,0 +1,13 @@
+.position {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  font-size: 40px;
+  border-radius: 10%;
+  border: 2px;
+  background-color: rgb(136, 122, 103);
+  color: rgb(209, 198, 198);
+}
