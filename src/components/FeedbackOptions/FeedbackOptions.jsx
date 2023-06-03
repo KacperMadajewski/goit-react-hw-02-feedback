@@ -14,13 +14,13 @@ export class FeedbackOptions extends Component {
 
     return (
       <div className={Styles.position}>
-        <button className={Styles.btn} onClick={forGood}>
+        <button className={Styles.btnGreen} onClick={forGood}>
           Good
         </button>
-        <button className={Styles.btn} onClick={forNeutral}>
+        <button className={Styles.btnBlue} onClick={forNeutral}>
           Neutral
         </button>
-        <button className={Styles.btn} onClick={forBad}>
+        <button className={Styles.btnRed} onClick={forBad}>
           Bad
         </button>
       </div>

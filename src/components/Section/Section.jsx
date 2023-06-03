@@ -13,7 +13,7 @@ export default class Section extends Component {
 
     return (
       <div className={Styles.backGround}>
-        <h2>{title}</h2>
+        <h2 className={Styles.title}>{title}</h2>
         {children}
       </div>
     );
