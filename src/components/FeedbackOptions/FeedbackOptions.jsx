@@ -4,17 +4,17 @@ import PropTypes from 'prop-types';
 
 export class FeedbackOptions extends Component {
   render() {
-    const { forGood, forNeutral, forBad } = this.props;
+    const { forOpinion } = this.props;
 
     return (
       <div className={Styles.position}>
-        <button className={Styles.btnGreen} onClick={forGood}>
+        <button name="good" className={Styles.btnGreen} onClick={forOpinion}>
           Good
         </button>
-        <button className={Styles.btnBlue} onClick={forNeutral}>
+        <button name="neutral" className={Styles.btnBlue} onClick={forOpinion}>
           Neutral
         </button>
-        <button className={Styles.btnRed} onClick={forBad}>
+        <button name="bad" className={Styles.btnRed} onClick={forOpinion}>
           Bad
         </button>
       </div>
@@ -23,7 +23,5 @@ export class FeedbackOptions extends Component {
 }
 
 FeedbackOptions.propTypes = {
-  forGood: PropTypes.func.isRequired,
-  forNeutral: PropTypes.func,
-  forBad: PropTypes.func,
+  forOpinion: PropTypes.func,
 };

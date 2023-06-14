@@ -16,27 +16,50 @@ export class App extends Component {
     bad: 0,
   };
 
+  /*
+  *
+ *  POPRAWNA I DZIAŁAJĄCA FUNKCJA
+ *  WYMIENNIE Z FUNKCJĄ SWITCH
+ * 
+        counter = ({ target }) => {
+          const { name } = target;
+          if (name === 'good') {
+            this.setState((state, props) => {
+              return { good: state.good + props.step };
+            });
+          } else if (name === 'bad') {
+            this.setState((state, props) => {
+              return { bad: state.bad + props.step };
+            });
+          } else if (name === 'neutral') {
+            this.setState((state, props) => {
+              return { neutral: state.neutral + props.step };
+            });
+          }
+        };
+  */
 
-  counter = () => {
-  
-}
-
-  counterForGood = () => {
-    this.setState((state, props) => {
-      return { good: state.good + props.step };
-    });
-  };
-
-  counterForNeutral = () => {
-    this.setState((state, props) => {
-      return { neutral: state.neutral + props.step };
-    });
-  };
-
-  counterForBad = () => {
-    this.setState((state, props) => {
-      return { bad: state.bad + props.step };
-    });
+  counter2 = ({ target }) => {
+    const { name } = target;
+    switch (name) {
+      case 'good':
+        this.setState((state, props) => {
+          return { good: state.good + props.step };
+        });
+        break;
+      case 'bad':
+        this.setState((state, props) => {
+          return { bad: state.bad + props.step };
+        });
+        break;
+      case 'neutral':
+        this.setState((state, props) => {
+          return { neutral: state.neutral + props.step };
+        });
+        break;
+      default:
+        console.log('Something went wrong!');
+    }
   };
 
   countTotalFeedback = () => {
@@ -49,7 +72,6 @@ export class App extends Component {
     const round = percentage.toFixed(2);
     return round;
   };
-
   render() {
     return (
       <div
@@ -63,11 +85,7 @@ export class App extends Component {
         }}
       >
         <Section title="Please leave feedback">
-          <FeedbackOptions
-            forGood={this.counterForGood}
-            forNeutral={this.counterForNeutral}
-            forBad={this.counterForBad}
-          />
+          <FeedbackOptions forOpinion={this.counter2} />
           <Statistics
             goodNum={this.state.good}
             neutralNum={this.state.neutral}
