@@ -16,6 +16,11 @@ export class App extends Component {
     bad: 0,
   };
 
+
+  counter = () => {
+  
+}
+
   counterForGood = () => {
     this.setState((state, props) => {
       return { good: state.good + props.step };

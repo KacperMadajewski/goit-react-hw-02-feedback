@@ -1,13 +1,8 @@
-import { number, string } from 'prop-types';
 import React, { Component } from 'react';
 import Styles from './Notifications.module.css';
+import PropTypes from 'prop-types';
 
 export class Notification extends Component {
-  static propTypes = {
-    total: number,
-    message: string,
-  };
-
   render() {
     const { total, message } = this.props;
 
@@ -26,3 +21,8 @@ export class Notification extends Component {
     );
   }
 }
+
+Notification.propTypes = {
+  total: PropTypes.number,
+  message: PropTypes.string,
+};

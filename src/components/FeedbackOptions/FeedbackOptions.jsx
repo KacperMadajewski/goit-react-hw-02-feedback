@@ -1,14 +1,8 @@
-import { func } from 'prop-types';
 import React, { Component } from 'react';
 import Styles from './FeedbackOptions.module.css';
+import PropTypes from 'prop-types';
 
 export class FeedbackOptions extends Component {
-  static propTypes = {
-    forGood: func.isRequired,
-    forNeutral: func,
-    forBad: func,
-  };
-
   render() {
     const { forGood, forNeutral, forBad } = this.props;
 
@@ -27,3 +21,9 @@ export class FeedbackOptions extends Component {
     );
   }
 }
+
+FeedbackOptions.propTypes = {
+  forGood: PropTypes.func.isRequired,
+  forNeutral: PropTypes.func,
+  forBad: PropTypes.func,
+};

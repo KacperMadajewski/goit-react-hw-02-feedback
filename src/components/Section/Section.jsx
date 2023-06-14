@@ -1,13 +1,8 @@
-import { array, string } from 'prop-types';
 import React, { Component } from 'react';
-import Styles from './Section.module.css'
+import Styles from './Section.module.css';
+import PropTypes from 'prop-types';
 
 export default class Section extends Component {
-  static propTypes = {
-    title: string.isRequired,
-    children: array,
-  };
-
   render() {
     const { title, children } = this.props;
 
@@ -19,3 +14,8 @@ export default class Section extends Component {
     );
   }
 }
+
+Section.propTypes = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.array,
+};
